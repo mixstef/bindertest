@@ -8,13 +8,18 @@ class DFA:
         self.start = start
     
     
-    def transition(self,fromstate,inputs,tostate):
+    def transition(self,fromstate,inp,tostate):
         
         """ Adds a transition from `fromstate` to `tostate`
-        for all items in sequence `inputs`. """
+        for `inp` (if a string) or for all items in sequence `inp`
+        (if a sequence). """
         
-        for item in inputs:
-            self.transitions.setdefault(fromstate,{})[item] = tostate
+        if isinstance(inp,str):
+            self.transitions.setdefault(fromstate,{})[inp] = tostate
+        
+        else:
+            for item in inp:
+                self.transitions.setdefault(fromstate,{})[item] = tostate
             
             
     def accept(self,state,token):
