@@ -70,7 +70,7 @@ class DFA:
 
                 # remember if current state is accepting
                 if state in self.accepting:
-                    token,lexeme = self.accepting[state],text[:pos]
+                    token,lexeme = self.accepting[state],text[startpos:pos]
 
             else:	# no transition found, return last match or None
                 return token,lexeme
