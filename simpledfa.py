@@ -49,13 +49,13 @@ class DFA:
         return text[pos]
 
 
-    def scan(self,text):
+    def scan(self,text,startpos=0):
         
-        """ Scans `text` from the beginning until no more transitions exist.
+        """ Scans `text` from the starting position `startpos` until no more transitions exist.
         Returns (token,lexeme) if an accepting state was reached or (None,'') otherwise. """
         
         # initial position on text and initial state
-        pos,state = 0,self.start
+        pos,state = startpos,self.start
         
         # memory variables for last seen accepting state
         token,lexeme = None,''
