@@ -1,3 +1,3 @@
-https://mixstef.github.io/courses/compilers/packages/compilerlabs-0.2.0.tar.gz
+https://mixstef.github.io/courses/compilers/packages/compilerlabs-0.2.1.tar.gz
 https://mixstef.github.io/courses/compilers/packages/plex-2.0.1.tar.gz
 
